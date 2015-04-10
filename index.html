@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mesh &ndash; A Processing Library by Lee Byron</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+<body>
+
+  <div id="header">
+    <div id="logo"><a href="http://leebyron.com">
+      <svg className="logo" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1124 142">
+        <g transform="translate(562, 71)">
+          <g fill="#FF744C">
+            <!-- L -->
+            <rect opacity="0.70" x="-562" y="37" width="94" height="32"/>
+            <!-- E2 -->
+            <polygon opacity="0.70" points="-221,-69 -311.4,-69 -311.2,-68.4 -312,-68.4 -312,69 -278,69 -278,-37 -221,-37"/>
+            <!-- B -->
+            <path opacity="0.70" d="M-74.6,-14h-28.7V-69H-135l0,138h60.4c22.8,0,41.3-18.8,41.3-41.7C-33.3,4.5,-51.8,-14,-74.6,-14z"/>
+            <!-- R -->
+            <path opacity="0.70" d="M202.1,12c22.2,0,40.3-18.3,40.3-40.5c0-22.2-18-40.5-40.3-40.5H137v81H202.1z"/>
+            <!-- O -->
+            <circle opacity="0.70" cx="339.7" cy="0" r="71"/>
+          </g>
+
+          <g fill="#6DA9B6">
+            <!-- E1 -->
+            <polygon opacity="0.70" points="-412,37 -412,-69 -446,-69 -446,69 -352,69 -352,37"/>
+            <!-- Y -->
+            <polygon opacity="0.70" points="71,-69 28,11 28,69 64,69 64,11 107,-69"/>
+            <!-- R -->
+            <polygon opacity="0.70" points="241.6,69 203.3,69 172.7,18.4 211,18.4"/>
+            <!-- N -->
+            <polygon opacity="0.70" points="561.6,69 522.3,69 436.7,-69 475.9,-69"/>
+          </g>
+
+          <g opacity="0.55" fill="#262628">
+
+            <!-- L -->
+            <rect x="-562" y="-69" width="2.5" height="138"/>
+            <rect x="-554.6" y="-69" width="2.5" height="138"/>
+            <rect x="-547.1" y="-69" width="2.5" height="138"/>
+            <rect x="-539.7" y="-69" width="2.5" height="138"/>
+            <rect x="-532.2" y="-69" width="2.5" height="138"/>
+
+            <!-- E1 -->
+            <rect x="-446" y="-69" width="91" height="2.5"/>
+            <rect x="-446" y="-61.6" width="91" height="2.5"/>
+            <rect x="-446" y="-54.1" width="91" height="2.5"/>
+            <rect x="-446" y="-46.7" width="91" height="2.5"/>
+            <rect x="-446" y="-39.5" width="91" height="2.5"/>
+            <rect x="-446" y="-16.5" width="85" height="2.5"/>
+            <rect x="-446" y="-9.1" width="85" height="2.5"/>
+            <rect x="-446" y="-1.6" width="85" height="2.5"/>
+            <rect x="-446" y="5.8" width="85" height="2.5"/>
+            <rect x="-446" y="13.3" width="85" height="2.5"/>
+            <rect x="-446" y="37" width="94" height="2.5"/>
+            <rect x="-446" y="44.4" width="94" height="2.5"/>
+            <rect x="-446" y="51.9" width="94" height="2.5"/>
+            <rect x="-446" y="59.3" width="94" height="2.5"/>
+            <rect x="-446" y="66.5" width="94" height="2.5"/>
+
+            <!-- E2 -->
+            <rect x="-312" y="-69" width="91" height="2.5"/>
+            <rect x="-312" y="-61.6" width="91" height="2.5"/>
+            <rect x="-312" y="-54.1" width="91" height="2.5"/>
+            <rect x="-312" y="-46.7" width="91" height="2.5"/>
+            <rect x="-312" y="-39.5" width="91" height="2.5"/>
+            <rect x="-312" y="-16.5" width="85" height="2.5"/>
+            <rect x="-312" y="-9.1" width="85" height="2.5"/>
+            <rect x="-312" y="-1.6" width="85" height="2.5"/>
+            <rect x="-312" y="5.8" width="85" height="2.5"/>
+            <rect x="-312" y="13.3" width="85" height="2.5"/>
+            <rect x="-312" y="37" width="94" height="2.5"/>
+            <rect x="-312" y="44.4" width="94" height="2.5"/>
+            <rect x="-312" y="51.9" width="94" height="2.5"/>
+            <rect x="-312" y="59.3" width="94" height="2.5"/>
+            <rect x="-312" y="66.5" width="94" height="2.5"/>
+
+            <!-- B -->
+            <rect x="-113.1" y="-69" width="2.5" height="138"/>
+            <rect x="-120.6" y="-69" width="2.5" height="138"/>
+            <rect x="-128" y="-69" width="2.5" height="138"/>
+            <rect x="-135" y="-69" width="2.5" height="138"/>
+
+            <rect x="-105.9" y="-69" width="2.7" height="79.5"/>
+            <rect x="-98.1" y="-69" width="2.7" height="79.5"/>
+            <rect x="-90.3" y="-69" width="2.7" height="79.5"/>
+            <path d="M-80.9,-69h-1.6v79.5l1.6,0c0.4,0,0.7,0,1.1,0V-68.9C-80.1,-69,-80.4,-69,-80.9,-69z"/>
+            <path d="M-74.7,-68.4V10c0.9-0.1,1.8-0.3,2.7-0.5V-67.9C-73,-68.1,-73.8,-68.3,-74.7,-68.4z"/>
+            <path d="M-67,-66.4V8c0.9-0.3,1.8-0.7,2.7-1.1V-65.2C-65.2,-65.6,-66.1,-66,-67,-66.4z"/>
+            <path d="M-59.2,-62.4V4c0.9-0.6,1.8-1.2,2.7-1.9V-60.5C-57.4,-61.2,-58.3,-61.8,-59.2,-62.4z"/>
+            <path d="M-51.4,-55.7v53.1c0.9-1,1.8-2.1,2.7-3.3V-52.4C-49.6,-53.6,-50.5,-54.7,-51.4,-55.7z"/>
+            <path d="M-43.6,-42.8c1.6,4.3,2.4,8.8,2.4,13.6c0,4.8-0.8,9.4-2.4,13.6"/>
+
+            <!-- Y -->
+            <polygon points="31,11 -16.9,-69 -19.9,-69 28,11"/>
+            <polygon points="39.2,11 -8.7,-69 -11.7,-69 36.2,11"/>
+            <polygon points="47.5,11 -0.4,-69 -3.4,-69 44.5,11"/>
+            <polygon points="55.8,11 7.9,-69 4.9,-69 52.8,11"/>
+            <polygon points="64,11 16.1,-69 13.1,-69 61,11"/>
+
+            <!-- R -->
+            <rect x="137" y="-69" width="2.5" height="138"/>
+            <rect x="144.4" y="-69" width="2.5" height="138"/>
+            <rect x="151.9" y="-69" width="2.5" height="138"/>
+            <rect x="159.3" y="-69" width="2.5" height="138"/>
+            <rect x="166.8" y="-69" width="2.5" height="138"/>
+
+            <!-- O -->
+            <path d="M273.6,-26v52c0.8,1.9,1.6,3.8,2.5,5.6V-31.6C275.2,-29.8,274.4,-27.9,273.6,-26z"/>
+            <path d="M281,-39.9v79.9c0.8,1.2,1.6,2.3,2.5,3.4V-43.4C282.6,-42.2,281.8,-41.1,281,-39.9z"/>
+            <path d="M288.4,-49V49c0.8,0.9,1.6,1.7,2.5,2.5v-103C290,-50.7,289.2,-49.9,288.4,-49z"/>
+            <path d="M295.7,-55.7v111.5c0.8,0.6,1.7,1.3,2.5,1.9V-57.6C297.4,-57,296.6,-56.4,295.7,-55.7z"/>
+            <path d="M303.1,-60.9v121.7c0.8,0.5,1.7,1,2.5,1.4V-62.3C304.8,-61.8,303.9,-61.3,303.1,-60.9z"/>
+            <path d="M311.3,-65.1v130.1c0.8,0.4,1.7,0.7,2.5,1V-66.1C312.9,-65.8,312.1,-65.4,311.3,-65.1z"/>
+            <path d="M318.2,-67.7v135.4c0.8,0.3,1.7,0.5,2.5,0.7V-68.4C319.9,-68.2,319,-67.9,318.2,-67.7z"/>
+            <path d="M325.6,-69.6v139.2c0.8,0.2,1.7,0.3,2.5,0.4V-70C327.2,-69.9,326.4,-69.8,325.6,-69.6z"/>
+            <path d="M332.9,-70.7v141.3c0.8,0.1,1.7,0.1,2.5,0.2V-70.9C334.6,-70.8,333.8,-70.8,332.9,-70.7z"/>
+            <path d="M340.3,-71v142c0.8,0,1.7,0,2.5-0.1V-70.9C342,-71,341.2,-71,340.3,-71z"/>
+            <path d="M347.7,-70.5v141.1c0.8-0.1,1.7-0.2,2.5-0.3V-70.2C349.4,-70.3,348.5,-70.4,347.7,-70.5z"/>
+
+            <!-- N -->
+            <rect x="436.7" y="-69" width="2.5" height="138"/>
+            <rect x="443.7" y="-69" width="2.5" height="138"/>
+            <rect x="451.1" y="-69" width="2.5" height="138"/>
+            <rect x="458.5" y="-69" width="2.5" height="138"/>
+            <rect x="466" y="-69" width="2.5" height="138"/>
+            <rect x="473.4" y="-69" width="2.5" height="138"/>
+
+            <rect x="522.3" y="-69" width="2.5" height="138"/>
+            <rect x="529.3" y="-69" width="2.5" height="138"/>
+            <rect x="536.8" y="-69" width="2.5" height="138"/>
+            <rect x="544.2" y="-69" width="2.5" height="138"/>
+            <rect x="551.7" y="-69" width="2.5" height="138"/>
+            <rect x="559.1" y="-69" width="2.5" height="138"/>
+          </g>
+        </g>
+      </svg>
+
+    </a></div>
+<!--    <div id="navigation">
+      <a href="/who">who</a>
+      <a href="/what">what</a>
+      <a href="/how">how</a>
+      <a href="/else" class="active">else</a>
+    </div>-->
+  </div>
+
+  <div id="content">
+    <div class="unit10">
+      <h1>Mesh &ndash; A Processing Library</h1>
+
+      <p>Mesh is a library for creating Voronoi, Delaunay and Convex Hull diagrams in Processing. After searching online for a Java package for creating Voronoi diagrams and failing to find anything simple enough to fit my needs I decided to make my own as simple as possible. I did find the wonderfully useful <a href="http://www.cs.ubc.ca/~lloyd/java/quickhull3d.html" target="_blank">QuickHull3D</a> package, which the algorithms for creating these diagrams are based on. These complete in <em>O(n log n)</em> time.</p>
+
+      <a name="voronoi"></a>
+      <h1>Voronoi Diagram</h1>
+
+      <img src="voronoi.png" title="Voronoi Diagram" class="left" />
+
+      <p>Voronoi Diagrams show the regions of space closest to each point. This can be used to create interesting visual patterns or as a preprocess for determining which point is closest to any given place in space. This is particulary useful for optimization in game design.</p>
+
+      <p style="clear:left;></p>
+
+      <a name="newvoronoi"></a>
+      <p><strong>new Voronoi( float[][] points )</strong></p>
+      <p>This creates and returns a new Voronoi object, which you can later ask for edges and regions. It takes a two dimensional array for describing points, you can think of this as an array of points.</p>
+      <p><pre>float[][] points = new float[3][2];
+
+points[0][0] = 120; // first point, x
+points[0][1] = 230; // first point, y
+points[1][0] = 150; // second point, x
+points[1][1] = 105; // second point, y
+points[2][0] = 320; // third point, x
+points[2][1] = 113; // third point, y
+
+Voronoi myVoronoi = new Voronoi( points );</pre></p>
+
+      <a name="voronoi.getregions"></a>
+      <p><strong>getRegions()</strong></p>
+      <p><code>getRegions()</code> returns an array of MPolygons, the order of which correspond to the order of the points entered. MPolygon contains the points of the polygon, and can be drawn to the stage.</p>
+      <p><pre>MPolygon[] myRegions = myVoronoi.getRegions();
+
+for(int i=0; i&lt;myRegions.length; i++)
+{
+  // an array of points
+  float[][] regionCoordinates = myRegions[i].getCoords();
+
+  fill(255,0,0);
+  myRegions[i].draw(this); // draw this shape
+}</pre></p>
+
+      <a name="voronoi.getedges"></a>
+      <p><strong>getEdges()</strong></p>
+      <p><code>getEdges()</code> returns a two dimensional array, or an array of lines. Use this to draw stroke lines on top of the regions.</p>
+      <p><pre>float[][] myEdges = myVoronoi.getEdges();
+
+for(int i=0; i&lt;myEdges.length; i++)
+{
+  float startX = myEdges[i][0];
+  float startY = myEdges[i][1];
+  float endX = myEdges[i][2];
+  float endY = myEdges[i][3];
+  line( startX, startY, endX, endY );
+}</pre></p>
+
+      <a name="delaunay"></a>
+      <h1>Delaunay Diagram</h1>
+
+      <img src="delaunay.png" title="Delaunay Diagram" class="left" />
+
+      <p>A Delaunay Diagram is an optimal triangulation of a given set of points. This is very helpful for applying mesh textures, or creating structures for physical simulation. Voronoi and Delaunay Diagrams are duals. For every edge of a Delaunay diagram, an edge of a Voronoi diagram perpendicularly bisects it.</p>
+
+      <p style="clear:left;></p>
+
+      <a name="newdelaunay"></a>
+      <p><strong>new Delaunay( float[][] points )</strong></p>
+      <p>This creates and returns a new Delaunay object, which you can later ask for edges and links. It takes a two dimensional array for describing points, you can think of this as an array of points.</p>
+      <p><pre>float[][] points = new float[3][2];
+
+points[0][0] = 120; // first point, x
+points[0][1] = 230; // first point, y
+points[1][0] = 150; // second point, x
+points[1][1] = 105; // second point, y
+points[2][0] = 320; // third point, x
+points[2][1] = 113; // third point, y
+
+Delaunay myDelaunay = new Delaunay( points );</pre></p>
+
+      <a name="delaunay.getedges"></a>
+      <p><strong>getEdges()</strong></p>
+      <p><code>getEdges()</code> returns a two dimensional array, or an array of lines. Use this to draw lines for connections.</p>
+      <p><pre>float[][] myEdges = myDelaunay.getEdges();
+
+for(int i=0; i&lt;myEdges.length; i++)
+{
+  float startX = myEdges[i][0];
+  float startY = myEdges[i][1];
+  float endX = myEdges[i][2];
+  float endY = myEdges[i][3];
+  line( startX, startY, endX, endY );
+}</pre></p>
+
+      <a name="delaunay.getlinks"></a>
+      <p><strong>getLinks()</strong></p>
+      <p><code>getLinks()</code> returns a two dimensional array, or an array of links. This is similar to <code>getEdges()</code> however rather than returning the actual coordinates of the edges, it returns integers which are indexes to the points array used to create the Delaunay object. This can be useful when the links themselves are important, such as when building springs in a particle system.</p>
+      <p><pre>int[][] myLinks = myDelaunay.getLinks();
+
+for(int i=0; i&lt;myLinks.length; i++)
+{
+  int startIndex = myLinks[i][0];
+  int endIndex = myLinks[i][1];
+
+  float startX = points[startIndex][0];
+  float startY = points[startIndex][1];
+  float endX = points[endIndex][2];
+  float endY = points[endIndex][3];
+  line( startX, startY, endX, endY );
+}</pre></p>
+
+      <a name="delaunay.getlinked"></a>
+      <p><strong>getLinked( int index )</strong></p>
+      <p>Similarily, <code>getLinked( int index )</code> returns indexes to the original points array. It takes an index and returns those indexes which are linked to it in the Delaunay diagram.</p>
+      <p><pre>int[] localLinks = myDelaunay.getLinked(0); // those linked to point #1
+println( localLinks );
+
+// outputs:
+// [0] 2
+// [1] 1</pre></p>
+
+      <a name="hull"></a>
+      <h1>Convex Hull</h1>
+
+      <img src="hull.png" title="Convex Hull" class="left" />
+
+      <p>A Convex Hull is the encompassing shape around a group of points. As if you were to wrap a piece of string around all of the points. This is handy when doing collision tests on complex shapes, or finding the most extreme points within a dataset.</p>
+
+      <p style="clear:both;"></p>
+
+      <a name="newhull"></a>
+      <p><strong>new Hull( float[][] points )</strong></p>
+      <p>This creates and returns a new Hull object, which you can later ask for region and extrema. It takes a two dimensional array for describing points, you can think of this as an array of points.</p>
+      <p><pre>float[][] points = new float[3][2];
+
+points[0][0] = 120; // first point, x
+points[0][1] = 230; // first point, y
+points[1][0] = 150; // second point, x
+points[1][1] = 105; // second point, y
+points[2][0] = 320; // third point, x
+points[2][1] = 113; // third point, y
+
+Hull myHull = new Hull( points );</pre></p>
+
+      <a name="hull.getregion"></a>
+      <p><strong>getRegion()</strong></p>
+      <p><code>getRegion()</code> returns an MPolygon of the Convex Hull. MPolygon contains the points of the polygon, and can be drawn to the stage.</p>
+      <p><pre>MPolygon myRegion = myHull.getRegion();
+fill(255,0,0);
+myRegion.draw(this);</pre></p>
+
+      <a name="hull.getextrema"></a>
+      <p><strong>getExtrema()</strong></p>
+      <p><code>getExtrema()</code> returns an array of integers which are indexes to the original points array. These points are extrema within the set of points and are the vertices of the hull. The order of which are clockwise from the topmost point.</p>
+      <p><pre>int[] extrema = myHull.getExtrema();
+println( extrema );
+
+// outputs:
+// [0] 1
+// [1] 2
+// [2] 0</pre></p>
+
+
+    </div>
+
+    <div class="unit4">
+
+      <h1>Install</h1>
+      <ul class="nobullet">
+        <li>Download <a href="mesh-0002.zip">Mesh</a></li>
+        <li>Unzip into Processing&apos;s <em>libraries</em> folder</li>
+        <li>Sketch &rarr; Import Library &rarr; mesh</li>
+      </ul>
+
+      <h1><a href="#voronoi">Voronoi</a></h1>
+      <ul class="nobullet">
+        <li><a href="#newvoronoi">new Voronoi()</a></li>
+        <li><a href="#voronoi.getregions">getRegions()</a></li>
+        <li><a href="#voronoi.getedges">getEdges()</a></li>
+      </ul>
+
+      <h1><a href="#delaunay">Delaunay</a></h1>
+      <ul class="nobullet">
+        <li><a href="#newdelaunay">new Delaunay()</a></li>
+        <li><a href="#delaunay.getedges">getEdges()</a></li>
+        <li><a href="#delaunay.getlinks">getLinks()</a></li>
+        <li><a href="#delaunay.getlinked">getLinked()</a></li>
+      </ul>
+
+      <h1><a href="#hull">Hull</a></h1>
+      <ul class="nobullet">
+        <li><a href="#newhull">new Hull()</a></li>
+        <li><a href="#hull.getregion">getRegion()</a></li>
+        <li><a href="#hull.getextrema">getExtrema()</a></li>
+      </ul>
+
+    </div>
+
+    <div id="footer">
+      <p><a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" target="_blank">Creative Commons</a> &ndash; Some rights reserved.
+      Maintained by <a href="http://leebyron.com">Lee Byron</a></p>
+    </div>
+  </div>
+
+</body>
+</html>
