@@ -9,6 +9,8 @@ body{
 	font-size: 12px;
 	min-width: 916px;
 	color: #2A2A2A;
+	max-width: 1016px;
+	margin: 0 auto;
 }
 
 h1{
