@@ -140,7 +140,7 @@ public class Voronoi {
 			}
 
 			// turn the coordinates into a polygon
-			regions[i] = new MPolygon(pointBuckets[i].length);
+			regions[i] = new MPolygon(faceOrder.length);
 			for( int f=0; f<faceOrder.length; f++ ){
 				int face = faceOrder.get(f);
 				regions[i].add( (float) dualPoints[face][0], (float) dualPoints[face][1] );
